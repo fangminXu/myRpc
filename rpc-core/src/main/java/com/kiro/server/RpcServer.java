@@ -1,39 +1,49 @@
 package com.kiro.server;
 
+import com.kiro.register.ServiceRegister;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Time;
 import java.util.concurrent.*;
 
 /**
  * @author Xufangmin
- * @create 2021-08-11-10:05
+ * @create 2021-08-13-14:32
  */
 public class RpcServer {
     private static final Logger logger = LoggerFactory.getLogger(RpcServer.class);
-    private final ExecutorService executorService;
 
-    public RpcServer(){
-        int corePoolSize = 5;
-        int maxPoolSize = 50;
-        long keepAliveTime = 60;
-        BlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(100);
-        executorService = new ThreadPoolExecutor(corePoolSize, maxPoolSize, keepAliveTime, TimeUnit.SECONDS, queue, Executors.defaultThreadFactory());
+    private static final int CORE_POOL_SIZE = 5;
+    private static final int MAX_POOL_SIZE = 50;
+    private static final int KEEP_ALIVE_TIME = 60;
+    private static final int BLOCKING_QUEUE_CAPACITY = 100;
+
+    private final ExecutorService threadPool;
+    private RequestHandler requestHandler = new RequestHandler();
+    private final ServiceRegister serviceRegister;
+
+    public RpcServer(ServiceRegister serviceRegister) {
+        this.serviceRegister = serviceRegister;
+        BlockingQueue<Runnable> workingQueue = new ArrayBlockingQueue<>(BLOCKING_QUEUE_CAPACITY);
+        threadPool = new ThreadPoolExecutor(CORE_POOL_SIZE, MAX_POOL_SIZE, KEEP_ALIVE_TIME, TimeUnit.SECONDS,
+                workingQueue, Executors.defaultThreadFactory());
     }
 
-    public void Register(Object service, int port){
+    public void start(int port){
         try(ServerSocket serverSocket = new ServerSocket(port)){
-            logger.info("服务器开始启动注册...");
+            logger.info("服务器启动...");
             Socket socket;
             while((socket = serverSocket.accept()) != null){
-                logger.info("服务器接收到请求：" + socket.getInetAddress());
-                executorService.execute(new WorkerThread(service, socket));
+                logger.info("消费者连接：{}:{}", socket.getInetAddress(), socket.getPort());
+                threadPool.execute(new RequestHandlerThread(socket, requestHandler, serviceRegister));
             }
+            threadPool.shutdown();
         } catch (IOException e) {
-            logger.error("服务端接收时发生错误", e);
+            logger.error("服务器启动时有错误发生：", e);
         }
     }
 }
