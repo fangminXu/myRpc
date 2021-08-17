@@ -41,7 +41,7 @@ public class CommonDecoder extends ReplayingDecoder {
             throw new RpcException(RpcError.UNKNOWN_PAKAGE_TYPE);
         }
         int serializerCode = byteBuf.readInt();
-        CommonSerializer serializer = CommonSerializer.getByteCode(serializerCode);
+        CommonSerializer serializer = CommonSerializer.getByCode(serializerCode);
         if(serializer == null){
             LOGGER.error("不识别的反序列化器:{}", serializerCode);
             throw new RpcException(RpcError.UNKNOWN_SERIALIZER);

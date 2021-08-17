@@ -2,6 +2,7 @@ import com.kiro.rpc.HelloService;
 import com.kiro.rpc.netty.server.NettyServer;
 import com.kiro.rpc.registry.DefaultServiceRegistry;
 import com.kiro.rpc.registry.ServiceRegistry;
+import com.kiro.rpc.serializer.HessianSerializer;
 
 /**
  * @author Xufangmin
@@ -13,6 +14,7 @@ public class NettyTestServer {
         ServiceRegistry registry = new DefaultServiceRegistry();
         registry.register(helloService);
         NettyServer server = new NettyServer();
+        server.setSerializer(new HessianSerializer());
         server.start(9999);
     }
 }

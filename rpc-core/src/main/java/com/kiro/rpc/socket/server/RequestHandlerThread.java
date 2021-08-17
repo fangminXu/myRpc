@@ -3,13 +3,14 @@ package com.kiro.rpc.socket.server;
 import com.kiro.rpc.RequestHandler;
 import com.kiro.rpc.entity.RpcRequest;
 import com.kiro.rpc.registry.ServiceRegistry;
+import com.kiro.rpc.serializer.CommonSerializer;
+import com.kiro.rpc.socket.util.ObjectReader;
+import com.kiro.rpc.socket.util.ObjectWriter;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 
 /**
@@ -24,18 +25,17 @@ public class RequestHandlerThread implements Runnable {
     private Socket socket;
     private RequestHandler handler;
     private ServiceRegistry registry;
+    private CommonSerializer serializer;
 
     @Override
     public void run() {
-        try(ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream())){
-            ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
-            RpcRequest request = (RpcRequest) inputStream.readObject();
-            String interfaceName = request.getInterfaceName();
+        try(InputStream inputStream = socket.getInputStream(); OutputStream outputStream = socket.getOutputStream()) {
+            RpcRequest rpcRequest = (RpcRequest) ObjectReader.readObject(inputStream);
+            String interfaceName = rpcRequest.getInterfaceName();
             Object service = registry.getService(interfaceName);
-            Object result = handler.handle(request, service);
-            outputStream.writeObject(result);
-            outputStream.flush();
-        } catch (IOException | ClassNotFoundException e) {
+            Object result = handler.handle(rpcRequest, service);
+            ObjectWriter.writeObject(outputStream, result, serializer);
+        } catch (IOException e) {
             LOGGER.error("调用或发送时有错误发生：", e);
         }
     }

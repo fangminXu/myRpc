@@ -3,6 +3,9 @@ package com.kiro.rpc.netty.server;
 import com.kiro.rpc.RpcServer;
 import com.kiro.rpc.codec.CommonDecoder;
 import com.kiro.rpc.codec.CommonEncoder;
+import com.kiro.rpc.enumeration.RpcError;
+import com.kiro.rpc.exception.RpcException;
+import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.serializer.JsonSerializer;
 import com.kiro.rpc.serializer.KryoSerializer;
 import io.netty.bootstrap.ServerBootstrap;
@@ -21,9 +24,14 @@ import org.slf4j.LoggerFactory;
  */
 public class NettyServer implements RpcServer {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServer.class);
+    private CommonSerializer serializer;
 
     @Override
     public void start(int port) {
+        if(serializer == null){
+            LOGGER.error("未设置序列化器");
+            throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
+        }
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -38,7 +46,7 @@ public class NettyServer implements RpcServer {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             ChannelPipeline pipeline = socketChannel.pipeline();
-                            pipeline.addLast(new CommonEncoder(new KryoSerializer()));
+                            pipeline.addLast(new CommonEncoder(serializer));
                             pipeline.addLast(new CommonDecoder());
                             pipeline.addLast(new NettyServerHandler());
                         }
@@ -52,5 +60,10 @@ public class NettyServer implements RpcServer {
             workerGroup.shutdownGracefully();
         }
 
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+        this.serializer = serializer;
     }
 }

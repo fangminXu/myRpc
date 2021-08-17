@@ -12,12 +12,14 @@ public interface CommonSerializer {
 
     int getCode();
 
-    static CommonSerializer getByteCode(int code){
+    static CommonSerializer getByCode(int code){
         switch (code){
             case 0:
                 return new KryoSerializer();
             case 1:
                 return new JsonSerializer();
+            case 2:
+                return new HessianSerializer();
             default:
                 return null;
         }

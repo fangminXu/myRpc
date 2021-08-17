@@ -2,8 +2,11 @@ package com.kiro.rpc.socket.server;
 
 import com.kiro.rpc.RequestHandler;
 import com.kiro.rpc.RpcServer;
+import com.kiro.rpc.enumeration.RpcError;
+import com.kiro.rpc.exception.RpcException;
 import com.kiro.rpc.registry.DefaultServiceRegistry;
 import com.kiro.rpc.registry.ServiceRegistry;
+import com.kiro.rpc.serializer.CommonSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +28,7 @@ public class SocketServer implements RpcServer {
     private final ExecutorService threadPool;
     private RequestHandler requestHandler = new RequestHandler(); //定义处理请求的工具类
     private final ServiceRegistry serviceRegistry; //定义注册工具类
+    private CommonSerializer serializer;
 
     public SocketServer(ServiceRegistry serviceRegistry) {
         this.serviceRegistry = serviceRegistry;
@@ -35,16 +39,25 @@ public class SocketServer implements RpcServer {
 
     @Override
     public void start(int port) {
+        if(serializer == null){
+            LOGGER.error("未设置序列化器");
+            throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
+        }
         try(ServerSocket serverSocket = new ServerSocket(port)){
             LOGGER.info("服务器开始启动...");
             Socket socket;
             while((socket = serverSocket.accept()) != null){
                 LOGGER.info("消费者连接{}:{}", socket.getInetAddress(), socket.getPort());
-                threadPool.execute(new RequestHandlerThread(socket, requestHandler, serviceRegistry));
+                threadPool.execute(new RequestHandlerThread(socket, requestHandler, serviceRegistry, serializer));
             }
             threadPool.shutdown();
         } catch (IOException e) {
             LOGGER.error("服务器启动时有错误发送：", e);
         }
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+        this.serializer = serializer;
     }
 }

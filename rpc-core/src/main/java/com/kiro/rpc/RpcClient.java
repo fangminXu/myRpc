@@ -1,6 +1,7 @@
 package com.kiro.rpc;
 
 import com.kiro.rpc.entity.RpcRequest;
+import com.kiro.rpc.serializer.CommonSerializer;
 
 /**
  * 客户端的通用接口，包含一个发送请求的方法
@@ -10,5 +11,7 @@ import com.kiro.rpc.entity.RpcRequest;
 public interface RpcClient {
 
     Object sendRequest(RpcRequest request);
+
+    void setSerializer(CommonSerializer serializer);
 
 }
