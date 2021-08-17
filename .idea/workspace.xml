@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23132939-04cc-4d0e-9519-69a76d58ef40" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/ChannelProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/ProtobufSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,30 +28,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChannelProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/ChannelProvider.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="74" column="42" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="42" />
+            <state relative-caret-position="262">
+              <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonSerializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProtobufSerializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/ProtobufSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1030#1255#0" expanded="true" />
-                <element signature="e#1254#1255#0" expanded="true" />
+                <element signature="e#1639#1640#0" expanded="true" />
+                <element signature="e#1675#1676#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NettyClient.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java">
+      <file leaf-file-name="SerializerCode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2536#2537#0" expanded="true" />
-                <element signature="e#2586#2587#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="143">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -74,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/BioChatServer.java" />
         <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioChatClient.java" />
         <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioUserInputHandler.java" />
         <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/NioChatServer.java" />
@@ -93,16 +105,13 @@
         <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/exception/SerializeException.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/KryoSerializer.java" />
-        <option value="$PROJECT_DIR$/rpc-core/pom.xml" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/HessianSerializer.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/util/ThreadPoolFactory.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClient.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcServer.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServer.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/util/ObjectWriter.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/RequestHandlerThread.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/SocketServer.java" />
         <option value="$PROJECT_DIR$/test-client/src/main/java/NettyTestClient.java" />
@@ -125,6 +134,10 @@
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/ChannelProvider.java" />
         <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/ProtobufSerializer.java" />
+        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" />
       </list>
     </option>
   </component>
@@ -143,9 +156,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="663" />
+    <option name="y" value="27" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -181,6 +194,36 @@
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/kiro/rpc" type="cbb8eebc:String" user="com/kiro/rpc" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="rpc-common" type="cbb8eebc:String" user="rpc-common" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
+              <item name="com/kiro/rpc" type="cbb8eebc:String" user="com/kiro/rpc" />
+              <item name="enumeration" type="cbb8eebc:String" user="enumeration" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="rpc-core" type="cbb8eebc:String" user="rpc-core" />
             </path>
             <path>
@@ -207,16 +250,37 @@
               <item name="rpc-core" type="cbb8eebc:String" user="rpc-core" />
               <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
               <item name="com/kiro/rpc" type="cbb8eebc:String" user="com/kiro/rpc" />
-              <item name="netty" type="cbb8eebc:String" user="netty" />
+              <item name="serializer" type="cbb8eebc:String" user="serializer" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="rpc-core" type="cbb8eebc:String" user="rpc-core" />
-              <item name="rpc-core" type="cbb8eebc:String" user="rpc-core" />
+              <item name="test-client" type="cbb8eebc:String" user="test-client" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="test-client" type="cbb8eebc:String" user="test-client" />
+              <item name="test-client" type="cbb8eebc:String" user="test-client" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="test-client" type="cbb8eebc:String" user="test-client" />
+              <item name="test-client" type="cbb8eebc:String" user="test-client" />
               <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
-              <item name="com/kiro/rpc" type="cbb8eebc:String" user="com/kiro/rpc" />
-              <item name="netty" type="cbb8eebc:String" user="netty" />
-              <item name="client" type="cbb8eebc:String" user="client" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="test-server" type="cbb8eebc:String" user="test-server" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="test-server" type="cbb8eebc:String" user="test-server" />
+              <item name="test-server" type="cbb8eebc:String" user="test-server" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="test-server" type="cbb8eebc:String" user="test-server" />
+              <item name="test-server" type="cbb8eebc:String" user="test-server" />
+              <item name="src/main/java" type="cbb8eebc:String" user="src/main/java" />
             </path>
           </expand>
           <select />
@@ -511,12 +575,12 @@
       <workItem from="1628932242982" duration="5106000" />
       <workItem from="1629006071132" duration="23652000" />
       <workItem from="1629125403373" duration="2357000" />
-      <workItem from="1629167218480" duration="21529000" />
+      <workItem from="1629167218480" duration="22276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105210000" />
+    <option name="totallyTimeSpent" value="105957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,7 +592,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="632" y="7" width="697" height="735" extended-state="0" />
+    <frame x="663" y="27" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -541,11 +605,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32874355" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27797204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29067641" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32874355" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.3877551" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.8037677" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" sideWeight="0.5017182" side_tool="true" weight="0.20272315" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -635,13 +699,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/NioChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test-server/src/main/java/TestServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -776,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/HessianSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -829,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -847,13 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="50" column="111" selection-start-line="50" selection-start-column="111" selection-end-line="50" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -989,16 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/NettyTestServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1021,20 +1047,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2536#2537#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test-client/src/main/java/NettyTestClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java">
+    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/NettyTestServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        <state relative-caret-position="209">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1050,15 +1098,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java">
+    <entry file="file://$PROJECT_DIR$/rpc-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+        <state relative-caret-position="262">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/ProtobufSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="56" column="60" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2536#2537#0" expanded="true" />
-            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#1639#1640#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
