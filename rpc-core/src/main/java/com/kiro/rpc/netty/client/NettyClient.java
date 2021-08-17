@@ -22,6 +22,9 @@ import io.netty.util.AttributeKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.InetSocketAddress;
+import java.util.concurrent.atomic.AtomicReference;
+
 /**
  * @author Xufangmin
  * @create 2021-08-16-13:44
@@ -54,37 +57,29 @@ public class NettyClient implements RpcClient {
             LOGGER.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
-        BOOTSTRAP.handler(new ChannelInitializer<SocketChannel>() {
-            @Override
-            protected void initChannel(SocketChannel socketChannel) throws Exception {
-                ChannelPipeline pipeline = socketChannel.pipeline();
-                pipeline.addLast(new CommonDecoder());
-                pipeline.addLast(new CommonEncoder(commonSerializer));
-                pipeline.addLast(new NettyClientHandler());
-            }
-        });
+        AtomicReference<Object> result = new AtomicReference<>(null);
         try {
-            ChannelFuture future = BOOTSTRAP.connect(host, port).sync();
-            LOGGER.info("客户端连接到服务器{}:{}", host, port);
-            Channel channel = future.channel();
-            if(channel != null){
-                channel.writeAndFlush(request).addListener(future1 -> {
-                    if(future1.isSuccess()){
-                        LOGGER.info(String.format("客户端发送消息：%s", request.toString()));
-                    } else {
-                        LOGGER.error("发送消息时有错误发生：", future1.cause());
+            Channel channel = ChannelProvider.get(new InetSocketAddress(host, port), commonSerializer);
+            if(channel.isActive()){
+                channel.writeAndFlush(request).addListener(future -> {
+                    if(future.isSuccess()){
+                        LOGGER.info(String.format("客户端发送消息: %s", request.toString()));
+                    }else{
+                        LOGGER.error("发送消息时有错误发生:" , future.cause());
                     }
                 });
                 channel.closeFuture().sync();
                 AttributeKey<RpcResponse> key = AttributeKey.valueOf("rpcResponse" + request.getRequestId());
                 RpcResponse rpcResponse = channel.attr(key).get();
                 RpcMessageChecker.check(request, rpcResponse);
-                return rpcResponse.getData();
+                result.set(rpcResponse.getData());
+            } else {
+                System.exit(0);
             }
         } catch (InterruptedException e) {
-            LOGGER.error("发送消息时有错误发生:", e);
+            LOGGER.error("发送消息时有错误发生：", e);
         }
-        return null;
+        return result.get();
     }
 
     @Override
