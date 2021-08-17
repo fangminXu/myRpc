@@ -20,12 +20,13 @@ public class RpcResponse<T> implements Serializable {
     private Integer code;
     private String message;
     private T data;
+    private String requestId;
 
-    public static<T> RpcResponse<T> success(T data){
-        return new RpcResponse<T>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMessage(), data);
+    public static<T> RpcResponse<T> success(T data, String requestId){
+        return new RpcResponse<T>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMessage(), data, requestId);
     }
 
-    public static<T> RpcResponse<T> fail(ResponseCode code){
-        return new RpcResponse<T>(code.getCode(), code.getMessage(), null);
+    public static<T> RpcResponse<T> fail(ResponseCode code, String requestId){
+        return new RpcResponse<T>(code.getCode(), code.getMessage(), null, requestId);
     }
 }

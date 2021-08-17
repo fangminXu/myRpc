@@ -9,6 +9,7 @@ import com.kiro.rpc.exception.RpcException;
 import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.socket.util.ObjectReader;
 import com.kiro.rpc.socket.util.ObjectWriter;
+import com.kiro.rpc.util.RpcMessageChecker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,6 +52,7 @@ public class SocketClient implements RpcClient {
                 LOGGER.error("服务调用失败, service:{}, response:{}", request.getInterfaceName(), rpcResponse);
                 throw new RpcException(RpcError.SERVICE_INVOCATION_FAILURE, " service:" + request.getInterfaceName());
             }
+            RpcMessageChecker.check(request, rpcResponse);
             return rpcResponse.getData();
         } catch (IOException e) {
             LOGGER.error("调用时有错误发生：", e);
