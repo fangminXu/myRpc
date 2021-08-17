@@ -14,7 +14,13 @@
         <module>rpc-api</module>
         <module>test-server</module>
         <module>test-client</module>
+        <module>chat-nio</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netty-version>4.1.50.Final</netty-version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -31,6 +37,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.30</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty-version}</version>
         </dependency>
     </dependencies>
 

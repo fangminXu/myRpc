@@ -1,49 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/test-client/src/main/java/TestClient.java" description="    public static void main(String[] args) {&#10;//   ..." line="13" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="23132939-04cc-4d0e-9519-69a76d58ef40" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/ResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/RpcError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/exception/RpcException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/ServiceRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandlerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/ThreadWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-client/src/main/java/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/TestServer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/BioChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioUserInputHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/UserInputHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/BioChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/ChatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/NioChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/PackageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/exception/RpcException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RequestHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClientProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/DefaultServiceRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/ServiceRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/JsonSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/client/SocketClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/RequestHandlerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/SocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-client/src/main/java/NettyTestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-server/src/main/java/NettyTestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/target/classes/com/kiro/rpc/api/HelloObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/target/classes/com/kiro/rpc/api/HelloService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/StatusCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/rpc/entity/RpcRequest$RpcRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/rpc/entity/RpcRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/rpc/entity/RpcResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/rpc/enumeration/StatusCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-api/target/classes/com/kiro/rpc/HelloObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-api/target/classes/com/kiro/rpc/HelloObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/ResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/RpcError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/exception/RpcException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/entity/RpcRequest$RpcRequestBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/entity/RpcRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/entity/RpcResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/enumeration/ResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/enumeration/RpcError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/kiro/exception/RpcException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/WorkerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClientProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/RpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/RpcServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/WorkerThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-client/src/main/java/ClientTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-client/target/classes/ClientTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/src/main/java/HelloServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/ServerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-server/target/classes/HelloServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/target/classes/HelloServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-server/target/classes/ServerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClientProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/ServiceRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandlerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/ThreadWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/client/RpcClientProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/register/DefaultServiceRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/register/ServiceRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/RequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/RequestHandlerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/RpcServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/kiro/server/ThreadWorker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-client/src/main/java/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-client/src/main/java/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-client/target/classes/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/test-client/target/classes/TestClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/src/main/java/TestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/src/main/java/TestServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/src/main/java/TestServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-server/target/classes/TestServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/test-server/target/classes/TestServer2.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,6 +87,7 @@
     <ignored path="$PROJECT_DIR$/test-client/target/" />
     <ignored path="$PROJECT_DIR$/rpc-core/target/" />
     <ignored path="$PROJECT_DIR$/rpc-api/target/" />
+    <ignored path="$PROJECT_DIR$/chat-nio/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,20 +97,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="NettyServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="126">
+              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="41" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java">
+      <file leaf-file-name="NettyServerHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonSerializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonEncoder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,8 +147,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="Kotlin File" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -99,45 +160,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/ResponseCode.java" />
-        <option value="$PROJECT_DIR$/rpc-core/pom.xml" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/Test.java" />
-        <option value="$PROJECT_DIR$/test-client/src/main/java/TestClient.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/RpcRequest.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/StatusCode.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/SocketClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/SocketServer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/Client.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/Server.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/ChatServer.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/UserInputHandler.kt" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/ChatServer.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/ChatHandler.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/UserInputHandler.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/ChatClient.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/BioChatServer.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioChatClient.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioUserInputHandler.java" />
+        <option value="$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/NioChatServer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/codec/CommonEncoder.java" />
+        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/client/RpcClient.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/WorkerThread.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/RpcServer.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/client/RpcClientProxy.java" />
-        <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloService.java" />
-        <option value="$PROJECT_DIR$/test-server/src/main/java/ClientTest.java" />
-        <option value="$PROJECT_DIR$/test-server/src/main/java/ServerTest.java" />
-        <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloObject.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/WorkerThread.java" />
+        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/ResponseCode.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcResponse.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java" />
+        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/PackageType.java" />
+        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java" />
         <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/exception/RpcException.java" />
-        <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" />
-        <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloService.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcRequest.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/exception/RpcException.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClientProxy.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/ThreadWorker.java" />
-        <option value="$PROJECT_DIR$/test-server/src/main/java/HelloServiceImpl.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcResponse.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/ResponseCode.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClient.java" />
-        <option value="$PROJECT_DIR$/test-client/src/main/java/ClientTest.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/ServiceRegister.java" />
-        <option value="$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/RpcError.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandler.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java" />
-        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandlerThread.java" />
-        <option value="$PROJECT_DIR$/test-server/src/main/java/TestServer2.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonDecoder.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/client/SocketClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/ServiceRegistry.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/DefaultServiceRegistry.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RequestHandle.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcServer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClientProxy.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/RequestHandlerThread.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/SocketServer.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClientHandler.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RequestHandler.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServer.java" />
+        <option value="$PROJECT_DIR$/test-server/src/main/java/NettyTestServer.java" />
+        <option value="$PROJECT_DIR$/test-client/src/main/java/NettyClient.java" />
+        <option value="$PROJECT_DIR$/test-client/src/main/java/NettyTestClient.java" />
         <option value="$PROJECT_DIR$/test-server/src/main/java/TestServer.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/test-server/src/main/java/TestServer2.java" />
+        <option value="$PROJECT_DIR$/test-client/src/main/java/TestClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonEncoder.java" />
+        <option value="$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/JsonSerializer.java" />
+        <option value="$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java" />
       </list>
     </option>
   </component>
@@ -156,11 +229,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="232" />
-    <option name="y" value="105" />
-    <option name="width" value="792" />
-    <option name="height" value="666" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="411" />
+    <option name="y" value="53" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,12 +243,48 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
               <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-nio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-nio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-nio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-nio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="chat-nio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kiro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
@@ -215,41 +324,6 @@
             <path>
               <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
               <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
               <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,7 +354,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiro" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
@@ -289,8 +363,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiro" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+              <item name="codec" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
@@ -299,7 +373,29 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kiro" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,11 +442,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kiromyRPC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kiromyRPC" type="462c0819:PsiDirectoryNode" />
+              <item name="test-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,31 +482,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestClient">
-    <configuration name="ClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ClientTest" />
+  <component name="RunManager" selected="Application.NettyTestClient">
+    <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kiro.client.ChatClient" />
+      <module name="chat-nio" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kiro.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="NettyTestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NettyTestClient" />
       <module name="test-client" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="ServerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ServerTest" />
+    <configuration name="NettyTestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NettyTestServer" />
       <module name="test-server" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestClient" />
-      <module name="test-client" />
+    <configuration name="NioChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kiro.client.NioChatClient" />
+      <module name="chat-nio" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kiro.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
-    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestServer" />
-      <module name="test-server" />
+    <configuration name="NioChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kiro.server.NioChatServer" />
+      <module name="chat-nio" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="TestServer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestServer2" />
-      <module name="test-server" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kiro.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -447,19 +568,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.ServerTest" />
-      <item itemvalue="Application.ClientTest" />
-      <item itemvalue="Application.TestServer" />
-      <item itemvalue="Application.TestClient" />
-      <item itemvalue="Application.TestServer2" />
+      <item itemvalue="Application.ChatClient" />
+      <item itemvalue="Application.NioChatServer" />
+      <item itemvalue="Application.NioChatClient" />
+      <item itemvalue="Application.NettyTestServer" />
+      <item itemvalue="Application.NettyTestClient" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.TestServer2" />
-        <item itemvalue="Application.TestServer" />
-        <item itemvalue="Application.ClientTest" />
-        <item itemvalue="Application.ServerTest" />
+        <item itemvalue="Application.NettyTestClient" />
+        <item itemvalue="Application.NettyTestServer" />
+        <item itemvalue="Application.NioChatClient" />
+        <item itemvalue="Application.NioChatServer" />
+        <item itemvalue="Application.ChatClient" />
       </list>
     </recent_temporary>
   </component>
@@ -481,46 +602,89 @@
       <workItem from="1628564319853" duration="12592000" />
       <workItem from="1628646297861" duration="5363000" />
       <workItem from="1628665832971" duration="3562000" />
-      <workItem from="1628831058736" duration="14846000" />
+      <workItem from="1628831058736" duration="17377000" />
+      <workItem from="1628932242982" duration="5106000" />
+      <workItem from="1629006071132" duration="23652000" />
+      <workItem from="1629125403373" duration="2357000" />
+      <workItem from="1629167218480" duration="2174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50035000" />
+    <option name="totallyTimeSpent" value="85855000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="411" y="53" width="697" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32874355" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32874355" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32161686" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32951945" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25817555" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32874355" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2444062" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32874355" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.1376702" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.47409734" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" sideWeight="0.5017182" side_tool="true" weight="0.20272315" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39759037" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38209984" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32874355" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32874355" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.24281392" />
+      <window_info id="Structure" order="1" sideWeight="0.5017182" side_tool="true" weight="0.20272315" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32874355" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2685026" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.383821" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32874355" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32874355" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32951945" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -543,317 +707,393 @@
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/Test.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/RpcServer.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/WorkerThread.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/Test.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/RpcServer.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/WorkerThread.java" />
-    <entry file="file://$PROJECT_DIR$/test-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java">
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/ChatHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="1">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/ResponseCode.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-common/pom.xml">
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/UserInputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="34">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/BioChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="459">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/client/com/kiro/rpc/server/RpcServer.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/Test.java" />
-    <entry file="file://$PROJECT_DIR$/test-client/src/main/java/TestClient.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/client/RpcClient.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/RpcServer.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/server/WorkerThread.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/client/RpcClientProxy.java" />
-    <entry file="file://$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloService.java">
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/BioChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioUserInputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java" />
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/codec/CommonDecoder.java" />
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/codec/CommonEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/ResponseCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/WorkerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/api/HelloObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="459">
+          <caret line="28" column="75" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/RpcError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="306">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/StatusCode.java">
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/PackageType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/enumeration/SerializerCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/exception/RpcException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/rpc/entity/RpcRequest.java">
+    <entry file="file://$PROJECT_DIR$/rpc-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="47" />
+        <state relative-caret-position="386">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/client/SocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/ServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/registry/DefaultServiceRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/RequestHandlerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/socket/server/SocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="42" column="101" selection-start-line="42" selection-start-column="101" selection-end-line="42" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/client/NioChatClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat-nio/src/main/java/com/kiro/server/NioChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/TestServer2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/TestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-client/src/main/java/TestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-start-column="2" selection-end-line="18" selection-end-column="7" />
           <folding>
+            <element signature="e#0#509#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Java/jdk1.8.0_231/src/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcRequest.java">
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="151">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/RpcClientProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/exception/RpcException.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/channel/nio/AbstractNioChannel.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="70">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/HelloServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/ThreadWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/entity/RpcResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/ResponseCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClientProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/client/RpcClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/ServiceRegister.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/util/concurrent/AbstractFuture.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-common/src/main/java/com/kiro/enumeration/RpcError.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/util/internal/ObjectUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="61">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandler.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/util/concurrent/DefaultPromise.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="87">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RpcServer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/channel/DefaultChannelPromise.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="70">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/TestServer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/channel/AbstractChannelHandlerContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-start-column="2" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="53">
+          <caret line="723" selection-start-line="723" selection-end-line="723" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/TestServer2.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/channel/DefaultChannelPipeline.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="70">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-client/src/main/java/TestClient.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.50.Final/netty-all-4.1.50.Final.jar!/io/netty/channel/AbstractChannel.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/server/RequestHandlerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="29" column="99" selection-start-line="29" selection-start-column="99" selection-end-line="29" selection-end-column="99" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/register/DefaultServiceRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rpc-api/src/main/java/com/kiro/rpc/HelloObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/JsonSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-client/src/main/java/NettyTestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-server/src/main/java/NettyTestServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="41" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/client/NettyClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/netty/server/NettyServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/serializer/CommonSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpc-core/src/main/java/com/kiro/rpc/codec/CommonEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
