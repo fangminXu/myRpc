@@ -14,6 +14,8 @@ public interface CommonSerializer {
 
     static CommonSerializer getByteCode(int code){
         switch (code){
+            case 0:
+                return new KryoSerializer();
             case 1:
                 return new JsonSerializer();
             default:
