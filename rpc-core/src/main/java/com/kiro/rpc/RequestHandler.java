@@ -3,6 +3,8 @@ package com.kiro.rpc;
 import com.kiro.rpc.entity.RpcRequest;
 import com.kiro.rpc.entity.RpcResponse;
 import com.kiro.rpc.enumeration.ResponseCode;
+import com.kiro.rpc.registry.ServiceProvider;
+import com.kiro.rpc.registry.ServiceProviderImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,9 +18,15 @@ import java.lang.reflect.Method;
  */
 public class RequestHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestHandler.class);
+    private static final ServiceProvider SERVICE_PROVIDER;
 
-    public Object handle(RpcRequest rpcRequest, Object service){
+    static {
+        SERVICE_PROVIDER = new ServiceProviderImpl();
+    }
+
+    public Object handle(RpcRequest rpcRequest){
         Object result = null;
+        Object service = SERVICE_PROVIDER.getServiceProvider(rpcRequest.getInterfaceName());
         try {
             result = invokeTargetMethod(rpcRequest, service);
             LOGGER.info("服务:{} 成功调用方法:{}", rpcRequest.getInterfaceName(), rpcRequest.getMethodName());

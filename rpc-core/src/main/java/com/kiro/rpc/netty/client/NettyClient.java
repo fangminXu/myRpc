@@ -8,6 +8,8 @@ import com.kiro.rpc.entity.RpcResponse;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
 import com.kiro.rpc.netty.server.NettyServerHandler;
+import com.kiro.rpc.registry.NacosServiceRegistry;
+import com.kiro.rpc.registry.ServiceRegistry;
 import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.serializer.JsonSerializer;
 import com.kiro.rpc.serializer.KryoSerializer;
@@ -32,15 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NettyClient implements RpcClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
 
-    private String host;
-    private int port;
     private static final Bootstrap BOOTSTRAP;
+    private final ServiceRegistry serviceRegistry;
 
     private CommonSerializer commonSerializer;
 
-    public NettyClient(String host, int port){
-        this.host = host;
-        this.port = port;
+    public NettyClient(){
+        this.serviceRegistry = new NacosServiceRegistry();
     }
 
     static {
@@ -59,7 +59,8 @@ public class NettyClient implements RpcClient {
         }
         AtomicReference<Object> result = new AtomicReference<>(null);
         try {
-            Channel channel = ChannelProvider.get(new InetSocketAddress(host, port), commonSerializer);
+            InetSocketAddress inetSocketAddress = serviceRegistry.lookupService(request.getInterfaceName());
+            Channel channel = ChannelProvider.get(inetSocketAddress, commonSerializer);
             if(channel.isActive()){
                 channel.writeAndFlush(request).addListener(future -> {
                     if(future.isSuccess()){

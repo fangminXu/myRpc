@@ -24,16 +24,13 @@ public class RequestHandlerThread implements Runnable {
 
     private Socket socket;
     private RequestHandler handler;
-    private ServiceRegistry registry;
     private CommonSerializer serializer;
 
     @Override
     public void run() {
-        try(InputStream inputStream = socket.getInputStream(); OutputStream outputStream = socket.getOutputStream()) {
+        try (InputStream inputStream = socket.getInputStream(); OutputStream outputStream = socket.getOutputStream()) {
             RpcRequest rpcRequest = (RpcRequest) ObjectReader.readObject(inputStream);
-            String interfaceName = rpcRequest.getInterfaceName();
-            Object service = registry.getService(interfaceName);
-            Object result = handler.handle(rpcRequest, service);
+            Object result = handler.handle(rpcRequest);
             ObjectWriter.writeObject(outputStream, result, serializer);
         } catch (IOException e) {
             LOGGER.error("调用或发送时有错误发生：", e);

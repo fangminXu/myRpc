@@ -6,6 +6,8 @@ import com.kiro.rpc.entity.RpcResponse;
 import com.kiro.rpc.enumeration.ResponseCode;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
+import com.kiro.rpc.registry.NacosServiceRegistry;
+import com.kiro.rpc.registry.ServiceRegistry;
 import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.socket.util.ObjectReader;
 import com.kiro.rpc.socket.util.ObjectWriter;
@@ -14,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
@@ -23,13 +26,11 @@ import java.net.Socket;
 public class SocketClient implements RpcClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(SocketClient.class);
 
-    private final int port;
-    private final String host;
+    private final ServiceRegistry serviceRegistry;
     private CommonSerializer serializer;
 
-    public SocketClient(String host, int port){
-        this.host = host;
-        this.port = port;
+    public SocketClient(){
+        this.serviceRegistry = new NacosServiceRegistry();
     }
 
     @Override
@@ -38,7 +39,9 @@ public class SocketClient implements RpcClient {
             LOGGER.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
-        try(Socket socket = new Socket(host, port)){
+        InetSocketAddress inetSocketAddress = serviceRegistry.lookupService(request.getInterfaceName());
+        try(Socket socket = new Socket()){
+            socket.connect(inetSocketAddress);
             OutputStream outputStream = socket.getOutputStream();
             InputStream inputStream = socket.getInputStream();
             ObjectWriter.writeObject(outputStream, request, serializer);

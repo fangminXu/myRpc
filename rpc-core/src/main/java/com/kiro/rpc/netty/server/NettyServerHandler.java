@@ -2,8 +2,7 @@ package com.kiro.rpc.netty.server;
 
 import com.kiro.rpc.RequestHandler;
 import com.kiro.rpc.entity.RpcRequest;
-import com.kiro.rpc.registry.DefaultServiceRegistry;
-import com.kiro.rpc.registry.ServiceRegistry;
+import com.kiro.rpc.util.ThreadPoolFactory;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -12,6 +11,8 @@ import io.netty.util.ReferenceCountUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.ExecutorService;
+
 /**
  * @author Xufangmin
  * @create 2021-08-16-15:38
@@ -19,25 +20,26 @@ import org.slf4j.LoggerFactory;
 public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
     private static RequestHandler requestHandler;
-    private static ServiceRegistry serviceRegistry;
+    private static final String THREAD_NAME_PREFIX = "netty-server-handler";
+    private static final ExecutorService threadPool;
 
     static {
         requestHandler = new RequestHandler();
-        serviceRegistry = new DefaultServiceRegistry();
+        threadPool = ThreadPoolFactory.createDefaultThreadPool(THREAD_NAME_PREFIX);
     }
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcRequest request) throws Exception {
-        try {
-            LOGGER.info("服务器接收到请求：{}", request);
-            String interfaceName = request.getInterfaceName();
-            Object service = serviceRegistry.getService(interfaceName);
-            Object result = requestHandler.handle(request, service);
-            ChannelFuture future = channelHandlerContext.writeAndFlush(result);
-            future.addListener(ChannelFutureListener.CLOSE); //等待写出完成，异步返回
-        } finally {
-            ReferenceCountUtil.release(request);
-        }
+        threadPool.execute(() -> {
+            try {
+                LOGGER.info("服务器接收到请求：{}", request);
+                Object result = requestHandler.handle(request);
+                ChannelFuture future = channelHandlerContext.writeAndFlush(result);
+                future.addListener(ChannelFutureListener.CLOSE);
+            } finally {
+                ReferenceCountUtil.release(request);
+            }
+        });
     }
 
     @Override

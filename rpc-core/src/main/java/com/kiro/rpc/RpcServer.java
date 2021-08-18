@@ -9,7 +9,9 @@ import com.kiro.rpc.serializer.CommonSerializer;
  */
 public interface RpcServer {
 
-    void start(int port);
+    void start();
 
     void setSerializer(CommonSerializer serializer);
+
+    <T> void publishService(Object sevice, Class<T> serviceClass);
 }

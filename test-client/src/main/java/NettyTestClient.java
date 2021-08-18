@@ -11,7 +11,7 @@ import com.kiro.rpc.serializer.HessianSerializer;
  */
 public class NettyTestClient {
     public static void main(String[] args) {
-        RpcClient client = new NettyClient("127.0.0.1", 9999);
+        RpcClient client = new NettyClient();
         client.setSerializer(new HessianSerializer());
         RpcClientProxy proxy = new RpcClientProxy(client);
         HelloService proxy1 = proxy.getProxy(HelloService.class);
