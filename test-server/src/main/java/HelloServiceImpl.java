@@ -11,7 +11,7 @@ public class HelloServiceImpl implements HelloService {
     private static final Logger logger = LoggerFactory.getLogger(HelloServiceImpl.class);
 
     public String hello(HelloObject helloObject) {
-        logger.info("服务端hello被调用，接收到：" + helloObject.getMessage());
-        return "调用返回值，id=" + helloObject.getId();
+        logger.info("服务端hello被调用，接收到消息：" + helloObject.getMessage());
+        return "本次处理来自Netty";
     }
 }

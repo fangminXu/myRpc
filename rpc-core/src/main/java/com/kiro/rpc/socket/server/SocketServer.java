@@ -68,8 +68,8 @@ public class SocketServer implements RpcServer {
     }
 
     @Override
-    public <T> void publishService(Object sevice, Class<T> serviceClass) {
-        serviceProvider.addServiceProvider(sevice);
+    public <T> void publishService(T sevice, Class<T> serviceClass) {
+        serviceProvider.addServiceProvider(sevice, serviceClass);
         serviceRegistry.register(serviceClass.getCanonicalName(), new InetSocketAddress(host, port));
     }
 }

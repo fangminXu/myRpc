@@ -13,5 +13,5 @@ public interface RpcServer {
 
     void setSerializer(CommonSerializer serializer);
 
-    <T> void publishService(Object sevice, Class<T> serviceClass);
+    <T> void publishService(T sevice, Class<T> serviceClass);
 }

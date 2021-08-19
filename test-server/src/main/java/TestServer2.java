@@ -10,7 +10,7 @@ import com.kiro.rpc.socket.server.SocketServer;
  */
 public class TestServer2 {
     public static void main(String[] args) {
-        HelloService helloService = new HelloServiceImpl();
+        HelloService helloService = new HelloServiceImpl2();
         SocketServer server = new SocketServer("127.0.0.1", 8888);
         server.publishService(helloService, HelloService.class);
         server.setSerializer(new KryoSerializer());

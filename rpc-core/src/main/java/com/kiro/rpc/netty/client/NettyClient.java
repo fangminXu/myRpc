@@ -8,7 +8,9 @@ import com.kiro.rpc.entity.RpcResponse;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
 import com.kiro.rpc.netty.server.NettyServerHandler;
+import com.kiro.rpc.registry.NacosServiceDiscovery;
 import com.kiro.rpc.registry.NacosServiceRegistry;
+import com.kiro.rpc.registry.ServiceDiscovery;
 import com.kiro.rpc.registry.ServiceRegistry;
 import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.serializer.JsonSerializer;
@@ -35,12 +37,12 @@ public class NettyClient implements RpcClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
 
     private static final Bootstrap BOOTSTRAP;
-    private final ServiceRegistry serviceRegistry;
+    private final ServiceDiscovery serviceDiscovery;
 
     private CommonSerializer commonSerializer;
 
     public NettyClient(){
-        this.serviceRegistry = new NacosServiceRegistry();
+        this.serviceDiscovery = new NacosServiceDiscovery();
     }
 
     static {
@@ -59,7 +61,7 @@ public class NettyClient implements RpcClient {
         }
         AtomicReference<Object> result = new AtomicReference<>(null);
         try {
-            InetSocketAddress inetSocketAddress = serviceRegistry.lookupService(request.getInterfaceName());
+            InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(request.getInterfaceName());
             Channel channel = ChannelProvider.get(inetSocketAddress, commonSerializer);
             if(channel.isActive()){
                 channel.writeAndFlush(request).addListener(future -> {

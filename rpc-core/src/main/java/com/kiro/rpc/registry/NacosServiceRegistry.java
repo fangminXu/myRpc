@@ -6,6 +6,7 @@ import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.pojo.Instance;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
+import com.kiro.rpc.util.NacosUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,37 +20,19 @@ import java.util.List;
  */
 public class NacosServiceRegistry implements ServiceRegistry {
     private static final Logger LOGGER = LoggerFactory.getLogger(NacosServiceRegistry.class);
+    private final NamingService namingService;
 
-    private static final String SERVER_ADDR = "127.0.0.1:8848";
-    private static final NamingService namingService;
-
-    static {
-        try {
-            namingService = NamingFactory.createNamingService(SERVER_ADDR);
-        } catch (NacosException e) {
-            LOGGER.error("连接到Nacos时有错误发生：", e);
-            throw new RpcException(RpcError.FAILED_TO_CONNECT_TO_SERVICE_REGISTRY);
-        }
+    public NacosServiceRegistry() {
+        this.namingService = NacosUtil.getNacosNamingService();
     }
+
     @Override
     public void register(String serviceName, InetSocketAddress inetSocketAddress) {
         try {
-            namingService.registerInstance(serviceName, inetSocketAddress.getHostName(), inetSocketAddress.getPort());
+            NacosUtil.registerService(namingService, serviceName, inetSocketAddress);
         } catch (NacosException e) {
             LOGGER.error("注册服务时有错误发生：", e);
             throw new RpcException(RpcError.REGISTER_SERVICE_FAILED);
         }
-    }
-
-    @Override
-    public InetSocketAddress lookupService(String serviceName) {
-        try {
-            List<Instance> instances = namingService.getAllInstances(serviceName);
-            Instance instance = instances.get(0);
-            return new InetSocketAddress(instance.getIp(), instance.getPort());
-        } catch (NacosException e) {
-            LOGGER.error("获取服务时有错误发生：", e);
-        }
-        return null;
     }
 }
