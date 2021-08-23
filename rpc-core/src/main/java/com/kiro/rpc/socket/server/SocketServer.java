@@ -4,12 +4,13 @@ import com.kiro.rpc.RequestHandler;
 import com.kiro.rpc.RpcServer;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
+import com.kiro.rpc.hook.ShutdownHook;
 import com.kiro.rpc.registry.NacosServiceRegistry;
 import com.kiro.rpc.registry.ServiceProvider;
 import com.kiro.rpc.registry.ServiceProviderImpl;
 import com.kiro.rpc.registry.ServiceRegistry;
 import com.kiro.rpc.serializer.CommonSerializer;
-import com.kiro.rpc.util.ThreadPoolFactory;
+import com.kiro.rpc.factory.ThreadPoolFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,8 +50,10 @@ public class SocketServer implements RpcServer {
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
 
-        try(ServerSocket serverSocket = new ServerSocket(port)){
+        try(ServerSocket serverSocket = new ServerSocket()){
+            serverSocket.bind(new InetSocketAddress(host, port));
             LOGGER.info("服务器开始启动...");
+            ShutdownHook.getShutdownHook().addClearAllHook();
             Socket socket;
             while((socket = serverSocket.accept()) != null){
                 LOGGER.info("消费者连接{}:{}", socket.getInetAddress(), socket.getPort());

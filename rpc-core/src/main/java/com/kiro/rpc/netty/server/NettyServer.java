@@ -5,6 +5,7 @@ import com.kiro.rpc.codec.CommonDecoder;
 import com.kiro.rpc.codec.CommonEncoder;
 import com.kiro.rpc.enumeration.RpcError;
 import com.kiro.rpc.exception.RpcException;
+import com.kiro.rpc.hook.ShutdownHook;
 import com.kiro.rpc.registry.NacosServiceRegistry;
 import com.kiro.rpc.registry.ServiceProvider;
 import com.kiro.rpc.registry.ServiceProviderImpl;
@@ -79,6 +80,7 @@ public class NettyServer implements RpcServer {
                         }
                     });
             ChannelFuture future = serverBootstrap.bind(host, port).sync();
+            ShutdownHook.getShutdownHook().addClearAllHook();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             LOGGER.error("启动服务器时有错误发生：", e);

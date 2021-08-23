@@ -2,7 +2,8 @@ package com.kiro.rpc.netty.server;
 
 import com.kiro.rpc.RequestHandler;
 import com.kiro.rpc.entity.RpcRequest;
-import com.kiro.rpc.util.ThreadPoolFactory;
+import com.kiro.rpc.factory.SingletonFactory;
+import com.kiro.rpc.factory.ThreadPoolFactory;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -19,12 +20,12 @@ import java.util.concurrent.ExecutorService;
  */
 public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
-    private static RequestHandler requestHandler;
     private static final String THREAD_NAME_PREFIX = "netty-server-handler";
-    private static final ExecutorService threadPool;
+    private final ExecutorService threadPool;
+    private final RequestHandler requestHandler;
 
-    static {
-        requestHandler = new RequestHandler();
+    public NettyServerHandler(){
+        requestHandler = SingletonFactory.getInstance(RequestHandler.class);
         threadPool = ThreadPoolFactory.createDefaultThreadPool(THREAD_NAME_PREFIX);
     }
 

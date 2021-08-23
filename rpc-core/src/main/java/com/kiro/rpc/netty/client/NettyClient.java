@@ -37,20 +37,21 @@ public class NettyClient implements RpcClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyClient.class);
 
     private static final Bootstrap BOOTSTRAP;
-    private final ServiceDiscovery serviceDiscovery;
+    private static final EventLoopGroup GROUP;
 
+    static {
+        GROUP = new NioEventLoopGroup();
+        BOOTSTRAP = new Bootstrap();
+        BOOTSTRAP.group(GROUP)
+                .channel(NioSocketChannel.class)
+                .option(ChannelOption.SO_KEEPALIVE, true);
+    }
+
+    private final ServiceDiscovery serviceDiscovery;
     private CommonSerializer commonSerializer;
 
     public NettyClient(){
         this.serviceDiscovery = new NacosServiceDiscovery();
-    }
-
-    static {
-        EventLoopGroup group = new NioEventLoopGroup();
-        BOOTSTRAP = new Bootstrap();
-        BOOTSTRAP.group(group)
-                .channel(NioSocketChannel.class)
-                .option(ChannelOption.SO_KEEPALIVE, true);
     }
 
     @Override
@@ -63,24 +64,26 @@ public class NettyClient implements RpcClient {
         try {
             InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(request.getInterfaceName());
             Channel channel = ChannelProvider.get(inetSocketAddress, commonSerializer);
-            if(channel.isActive()){
-                channel.writeAndFlush(request).addListener(future -> {
-                    if(future.isSuccess()){
-                        LOGGER.info(String.format("客户端发送消息: %s", request.toString()));
-                    }else{
-                        LOGGER.error("发送消息时有错误发生:" , future.cause());
-                    }
-                });
-                channel.closeFuture().sync();
-                AttributeKey<RpcResponse> key = AttributeKey.valueOf("rpcResponse" + request.getRequestId());
-                RpcResponse rpcResponse = channel.attr(key).get();
-                RpcMessageChecker.check(request, rpcResponse);
-                result.set(rpcResponse.getData());
-            } else {
-                System.exit(0);
+            if(!channel.isActive()){
+                GROUP.shutdownGracefully();
+                LOGGER.info("服务器未开启...");
+                return null;
             }
+            channel.writeAndFlush(request).addListener(future -> {
+                if(future.isSuccess()){
+                    LOGGER.info(String.format("客户端发送消息: %s", request.toString()));
+                }else{
+                    LOGGER.error("发送消息时有错误发生:" , future.cause());
+                }
+            });
+            channel.closeFuture().sync();
+            AttributeKey<RpcResponse> key = AttributeKey.valueOf("rpcResponse" + request.getRequestId());
+            RpcResponse rpcResponse = channel.attr(key).get();
+            RpcMessageChecker.check(request, rpcResponse);
+            result.set(rpcResponse.getData());
         } catch (InterruptedException e) {
             LOGGER.error("发送消息时有错误发生：", e);
+            Thread.currentThread().interrupt();
         }
         return result.get();
     }
