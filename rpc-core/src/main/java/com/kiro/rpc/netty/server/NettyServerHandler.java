@@ -38,8 +38,11 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
             }
             LOGGER.info("服务器端接收到请求:{}", request);
             Object result = requestHandler.handle(request);
-            ChannelFuture future = channelHandlerContext.writeAndFlush(request);
-            future.addListener(ChannelFutureListener.CLOSE_ON_FAILURE);
+            if(channelHandlerContext.channel().isActive() && channelHandlerContext.channel().isWritable()){
+                channelHandlerContext.writeAndFlush(result);
+            }else{
+                LOGGER.error("通道不可写");
+            }
         } finally {
             ReferenceCountUtil.release(request);
         }

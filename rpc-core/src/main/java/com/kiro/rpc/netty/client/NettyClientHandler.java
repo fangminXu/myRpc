@@ -2,6 +2,7 @@ package com.kiro.rpc.netty.client;
 
 import com.kiro.rpc.entity.RpcRequest;
 import com.kiro.rpc.entity.RpcResponse;
+import com.kiro.rpc.factory.SingletonFactory;
 import com.kiro.rpc.serializer.CommonSerializer;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFutureListener;
@@ -22,14 +23,17 @@ import java.net.InetSocketAddress;
  */
 public class NettyClientHandler extends SimpleChannelInboundHandler<RpcResponse> {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyClientHandler.class);
+    private final UnprocessedRequest unprocessedRequest;
+
+    public NettyClientHandler(){
+        this.unprocessedRequest = SingletonFactory.getInstance(UnprocessedRequest.class);
+    }
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcResponse rpcResponse) throws Exception {
         try {
             LOGGER.info(String.format("客户端接收到消息：%s", rpcResponse));
-            AttributeKey<RpcResponse> key = AttributeKey.valueOf("rpcResponse" + rpcResponse.getRequestId());
-            channelHandlerContext.channel().attr(key).set(rpcResponse);
-            channelHandlerContext.channel().close();
+            unprocessedRequest.complete(rpcResponse);
         } finally {
             ReferenceCountUtil.release(rpcResponse);
         }

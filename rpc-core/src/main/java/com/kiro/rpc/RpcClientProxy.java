@@ -1,6 +1,9 @@
 package com.kiro.rpc;
 
 import com.kiro.rpc.entity.RpcRequest;
+import com.kiro.rpc.entity.RpcResponse;
+import com.kiro.rpc.netty.client.NettyClient;
+import com.kiro.rpc.socket.client.SocketClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,6 +11,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Rpc客户端动态代理，生成对象的代理类，并远程调用服务端同名方法
@@ -30,10 +35,24 @@ public class RpcClientProxy implements InvocationHandler {
     }
 
     @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    public Object invoke(Object proxy, Method method, Object[] args) {
         logger.info("调用方法：{}#{}", method.getDeclaringClass().getName(), method.getName());
         RpcRequest rpcRequest = new RpcRequest(UUID.randomUUID().toString(), method.getDeclaringClass().getName(),
                 method.getName(), args, method.getParameterTypes(), false);
-        return client.sendRequest(rpcRequest);
+        Object result = null;
+        if(client instanceof NettyClient){
+            CompletableFuture<RpcResponse> completableFuture = (CompletableFuture<RpcResponse>) client.sendRequest(rpcRequest);
+            try {
+                result = completableFuture.get().getData();
+            } catch (InterruptedException | ExecutionException e) {
+                logger.error("方法调用请求失败", e);
+                return null;
+            }
+        }
+        if(client instanceof SocketClient){
+            RpcResponse rpcResponse = (RpcResponse) client.sendRequest(rpcRequest);
+            result = rpcResponse.getData();
+        }
+        return result;
     }
 }
