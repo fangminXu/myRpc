@@ -11,7 +11,6 @@ import com.kiro.rpc.socket.client.SocketClient;
 public class TestClient {
     public static void main(String[] args) {
         SocketClient client = new SocketClient();
-        client.setSerializer(new KryoSerializer());
         RpcClientProxy proxy = new RpcClientProxy(client);
         HelloService helloService = proxy.getProxy(HelloService.class);
         String result = helloService.hello(new HelloObject(12, "this is a message"));

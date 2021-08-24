@@ -20,10 +20,12 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
+import io.netty.handler.timeout.IdleStateHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Xufangmin
@@ -31,7 +33,7 @@ import java.net.InetSocketAddress;
  */
 public class NettyServer implements RpcServer {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServer.class);
-    private CommonSerializer serializer;
+    private final CommonSerializer serializer;
     private final String host;
     private final int port;
 
@@ -39,10 +41,15 @@ public class NettyServer implements RpcServer {
     private final ServiceProvider serviceProvider;
 
     public NettyServer(String host, int port){
+        this(host, port, DEFAULT_SERIALIZER);
+    }
+
+    public NettyServer(String host, int port, Integer serializer){
         this.host = host;
         this.port = port;
         serviceRegistry = new NacosServiceRegistry();
         serviceProvider = new ServiceProviderImpl();
+        this.serializer = CommonSerializer.getByCode(serializer);
     }
 
 
@@ -60,6 +67,7 @@ public class NettyServer implements RpcServer {
             LOGGER.error("未设置序列化器");
             throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
         }
+        ShutdownHook.getShutdownHook().addClearAllHook();
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -74,13 +82,13 @@ public class NettyServer implements RpcServer {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             ChannelPipeline pipeline = socketChannel.pipeline();
+                            pipeline.addLast(new IdleStateHandler(30, 0, 0, TimeUnit.SECONDS));
                             pipeline.addLast(new CommonEncoder(serializer));
                             pipeline.addLast(new CommonDecoder());
                             pipeline.addLast(new NettyServerHandler());
                         }
                     });
             ChannelFuture future = serverBootstrap.bind(host, port).sync();
-            ShutdownHook.getShutdownHook().addClearAllHook();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             LOGGER.error("启动服务器时有错误发生：", e);
@@ -89,11 +97,6 @@ public class NettyServer implements RpcServer {
             workerGroup.shutdownGracefully();
         }
 
-    }
-
-    @Override
-    public void setSerializer(CommonSerializer serializer) {
-        this.serializer = serializer;
     }
 
 }

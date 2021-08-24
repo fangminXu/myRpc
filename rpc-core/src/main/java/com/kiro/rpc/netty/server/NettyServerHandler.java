@@ -8,6 +8,8 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.handler.timeout.IdleState;
+import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.ReferenceCountUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,26 +23,26 @@ import java.util.concurrent.ExecutorService;
 public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyServerHandler.class);
     private static final String THREAD_NAME_PREFIX = "netty-server-handler";
-    private final ExecutorService threadPool;
     private final RequestHandler requestHandler;
 
     public NettyServerHandler(){
         requestHandler = SingletonFactory.getInstance(RequestHandler.class);
-        threadPool = ThreadPoolFactory.createDefaultThreadPool(THREAD_NAME_PREFIX);
     }
 
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, RpcRequest request) throws Exception {
-        threadPool.execute(() -> {
-            try {
-                LOGGER.info("服务器接收到请求：{}", request);
-                Object result = requestHandler.handle(request);
-                ChannelFuture future = channelHandlerContext.writeAndFlush(result);
-                future.addListener(ChannelFutureListener.CLOSE);
-            } finally {
-                ReferenceCountUtil.release(request);
+        try{
+            if(request.isHeartbeat()){
+                LOGGER.info("接收到客户端心跳包");
+                return;
             }
-        });
+            LOGGER.info("服务器端接收到请求:{}", request);
+            Object result = requestHandler.handle(request);
+            ChannelFuture future = channelHandlerContext.writeAndFlush(request);
+            future.addListener(ChannelFutureListener.CLOSE_ON_FAILURE);
+        } finally {
+            ReferenceCountUtil.release(request);
+        }
     }
 
     @Override
@@ -48,5 +50,18 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
         LOGGER.error("处理调用过程时有错误发生：");
         cause.printStackTrace();
         ctx.close();
+    }
+
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        if(evt instanceof IdleStateEvent) {
+            IdleState state = ((IdleStateEvent) evt).state();
+            if(state == IdleState.READER_IDLE){
+                LOGGER.info("长时间未收到心跳包，断开连接...");
+                ctx.close();
+            }
+        }else{
+            super.userEventTriggered(ctx, evt);
+        }
     }
 }

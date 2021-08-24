@@ -3,6 +3,7 @@ import com.kiro.rpc.HelloService;
 import com.kiro.rpc.RpcClient;
 import com.kiro.rpc.RpcClientProxy;
 import com.kiro.rpc.netty.client.NettyClient;
+import com.kiro.rpc.serializer.CommonSerializer;
 import com.kiro.rpc.serializer.HessianSerializer;
 
 /**
@@ -11,8 +12,7 @@ import com.kiro.rpc.serializer.HessianSerializer;
  */
 public class NettyTestClient {
     public static void main(String[] args) {
-        RpcClient client = new NettyClient();
-        client.setSerializer(new HessianSerializer());
+        RpcClient client = new NettyClient(CommonSerializer.PROTOBUF_SERIALIZER);
         RpcClientProxy proxy = new RpcClientProxy(client);
         HelloService proxy1 = proxy.getProxy(HelloService.class);
         String result = proxy1.hello(new HelloObject(12, "this is message"));

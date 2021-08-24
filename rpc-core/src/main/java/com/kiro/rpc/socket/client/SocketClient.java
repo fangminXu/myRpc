@@ -29,12 +29,16 @@ public class SocketClient implements RpcClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(SocketClient.class);
 
     private final ServiceDiscovery serviceDiscovery;
-    private CommonSerializer serializer;
+    private final CommonSerializer serializer;
 
     public SocketClient(){
-        this.serviceDiscovery = new NacosServiceDiscovery();
+        this(DEFAULT_SERIALIZER);
     }
 
+    public SocketClient(Integer serializer){
+        this.serializer = CommonSerializer.getByCode(serializer);
+        this.serviceDiscovery = new NacosServiceDiscovery();
+    }
     @Override
     public Object sendRequest(RpcRequest request) {
         if(serializer == null){
@@ -63,10 +67,5 @@ public class SocketClient implements RpcClient {
             LOGGER.error("调用时有错误发生：", e);
             throw new RpcException("服务调用失败", e);
         }
-    }
-
-    @Override
-    public void setSerializer(CommonSerializer serializer) {
-        this.serializer = serializer;
     }
 }
